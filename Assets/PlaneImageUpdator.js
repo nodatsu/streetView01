@@ -19,7 +19,7 @@ function updateTexture () {
 	var latitude: double;
 
 	if (Application.platform == RuntimePlatform.Android) {
-		var loc: GetLocation = this.transform.parent.GetComponent.<GetLocation>();
+		var loc: GetLocation = this.transform.parent.GetComponent(GetLocation);
 
 		while (!loc.done) {
 			yield;
@@ -42,5 +42,5 @@ function updateTexture () {
 
 	yield www;
 
-	this.GetComponent.<Renderer>().material.mainTexture = www.texture;
+	this.GetComponent(Renderer).material.mainTexture = www.texture;
 }

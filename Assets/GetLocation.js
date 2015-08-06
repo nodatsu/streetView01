@@ -6,8 +6,10 @@ public var done: boolean = false;
 
 function Start () {
 	// First, check if user has location service enabled
-	if (!Input.location.isEnabledByUser)
+	if (!Input.location.isEnabledByUser) {
+		print ("Input.location disabled");
 		return;
+	}
 
 	// Start service before querying location
 	Input.location.Start ();
@@ -34,6 +36,7 @@ function Start () {
 		longitude = Input.location.lastData.longitude;
 		latitude = Input.location.lastData.latitude;
 		done = true;
+		print("LLLLL: " + longitude + ", " + latitude);
 	}
 
 	// Stop service if there is no need to query location updates continuously

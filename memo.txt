@@ -12,6 +12,10 @@ Unity Street View
 環境光の設定
 	Edit -> RenderSettings -> Ambient Light
 
+イベント関数の実行順
+	(参考) イベント関数の実行順
+	http://docs.unity3d.com/ja/current/Manual/ExecutionOrder.html
+
 テクスチャの透明度を有効にする
 	マテリアルのshaderをDiffuseからTransparent/Diffuseに変更
 	(参考) http://neareal.net/index.php?ComputerGraphics%2FUnity%2FTips%2FEnableTransparentTexture
@@ -22,10 +26,6 @@ Unity Street View
 	http://tips.hecomi.com/entry/2014/03/16/233943
 
 	シェーダはマテリアルに設定、マテリアルをオブジェクトに設定
-
-イベント関数の実行順
-	(参考) イベント関数の実行順
-	http://docs.unity3d.com/ja/current/Manual/ExecutionOrder.html
 
 -------------------------------------------------------------------------------
 Android
@@ -46,6 +46,41 @@ Unityのプラットフォーム判別
 	(参考) http://docs.unity3d.com/ScriptReference/LocationService.Start.html
 	※ 端末側で位置情報利用を許可しておくこと
 
+コンポーネントの参照(JS)
+	UnityScriptでは以下のどちらでも動く
+		GetComponent.<タイプ名>()
+		GetComponent(タイプ名)
+
+-------------------------------------------------------------------------------
+unityChan
+
+unityChan召還
+	Window -> Asset Store -> 3D Models -> "Unity-chan!" model をimport
+		※ ログインが必要
+		すべてインポート
+
+モデル配置
+
+ライト設定
+	専用レイヤ追加、unituChanとライトを入れる
+	ライトのCulling Maskをレイヤ内だけに
+
+アニメーション設定
+	(参考) Unityちゃんをキー操作で走らせる
+	http://qiita.com/mokemokechicken/items/137c3a00d44841d3473e
+
+	(1) Animator Controller を生成
+	(2) 状態を生成(create state)
+		"Walking"
+		"Running"
+	(3) それぞれの状態にモーションを設定
+	(4) 状態繊維を設定
+		新しいパラメータを作成
+			"isRunning"
+		状態間に遷移を設定(make transition)
+			Conditions に "isRunnging == true/false"を設定
+	(5) Unityちゃんの Controller に設定
+	(6) スクリプトで操作する
 
 -------------------------------------------------------------------------------
 Git
