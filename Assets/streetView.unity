@@ -483,6 +483,7 @@ GameObject:
   - 33: {fileID: 1959130558}
   - 64: {fileID: 1959130557}
   - 23: {fileID: 1959130556}
+  - 114: {fileID: 1959130559}
   m_Layer: 0
   m_Name: Front
   m_TagString: Untagged
@@ -496,7 +497,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1959130554}
-  m_LocalRotation: {x: .70710659, y: 0, z: 0, w: -.707106948}
+  m_LocalRotation: {x: -1.15202326e-07, y: .707106709, z: -.707106829, w: -1.15202312e-07}
   m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -542,6 +543,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1959130554}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1959130559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959130554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462b6bae3f6174fbb839464640c318df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heading: 0
+  pitch: 0
 --- !u!1 &2061772521
 GameObject:
   m_ObjectHideFlags: 0
