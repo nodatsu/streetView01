@@ -12,9 +12,6 @@ Unity Street View
 環境光の設定
 	Edit -> RenderSettings -> Ambient Light
 
-Unityのプラットフォーム判別
-	(参考) http://qiita.com/Ubermensch/items/75072ef89249cb3b30e7
-
 テクスチャの透明度を有効にする
 	マテリアルのshaderをDiffuseからTransparent/Diffuseに変更
 	(参考) http://neareal.net/index.php?ComputerGraphics%2FUnity%2FTips%2FEnableTransparentTexture
@@ -30,9 +27,25 @@ Unityのプラットフォーム判別
 	(参考) イベント関数の実行順
 	http://docs.unity3d.com/ja/current/Manual/ExecutionOrder.html
 
+-------------------------------------------------------------------------------
+Android
+
+実機での動作
+	File -> Build Settings
+		android に switch platform
+	Player Settings
+		Company Name: Aomori Univ. Japan
+		Other Settings: Identification: jp.AomoriUniv.sv01
+	Build & Run
+		セーブファイル名を適当に設定
+
+Unityのプラットフォーム判別
+	(参考) http://qiita.com/Ubermensch/items/75072ef89249cb3b30e7
+
 位置の取り出し
 	(参考) http://docs.unity3d.com/ScriptReference/LocationService.Start.html
 	※ 端末側で位置情報利用を許可しておくこと
+
 
 -------------------------------------------------------------------------------
 Git
