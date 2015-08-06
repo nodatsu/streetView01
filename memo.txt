@@ -1,0 +1,53 @@
+Unity Street View
+
+	(参考) UnityでGoogleストリートビューを使ったハコスコ対応アプリを作る
+	http://qiita.com/aimino/items/2149990a551bf5c0d59d
+
+	(参考) ハコスコ対応アプリチュートリアルをやったときのメモ
+	http://hellkite.hatenablog.com/entry/20140914/hacosco_vr
+
+-------------------------------------------------------------------------------
+開発メモ
+-------------------------------------------------------------------------------
+Unityのプラットフォーム判別
+	(参考) http://qiita.com/Ubermensch/items/75072ef89249cb3b30e7
+
+テクスチャの透明度を有効にする
+	マテリアルのshaderをDiffuseからTransparent/Diffuseに変更
+	(参考) http://neareal.net/index.php?ComputerGraphics%2FUnity%2FTips%2FEnableTransparentTexture
+
+シェーダについて
+
+	(参考) Unity のシェーダの基礎を勉強してみたのでやる気出してまとめてみた
+	http://tips.hecomi.com/entry/2014/03/16/233943
+
+	シェーダはマテリアルに設定、マテリアルをオブジェクトに設定
+
+イベント関数の実行順
+	(参考) イベント関数の実行順
+	http://docs.unity3d.com/ja/current/Manual/ExecutionOrder.html
+
+位置の取り出し
+	(参考) http://docs.unity3d.com/ScriptReference/LocationService.Start.html
+	※ 端末側で位置情報利用を許可しておくこと
+
+-------------------------------------------------------------------------------
+Git
+
+プロジェクト設定
+	Edit -> Project Sttings -> Editor
+		Version Control の Mode を Visible Meta Files に変更
+		Asset Serialization の Mode を Force Text に変更
+
+-------------------------------------------------------------------------------
+OSX対応
+	Android SDKフォルダ
+		/Users/ユーザ名/Library/Android/SDK
+
+		ライブラリを表示させる
+		$ chflags nohidden ~/Library/
+
+	実機デバッグ時のログ表示
+		$ Library/Android/sdk/platform-tools/adb logcat
+
+-------------------------------------------------------------------------------
