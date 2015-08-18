@@ -27,6 +27,13 @@ Unity Street View
 
 	シェーダはマテリアルに設定、マテリアルをオブジェクトに設定
 
+オブジェクトの表示/非表示切り替え(子までまとめて)
+	gameObject.SetActive(true/false)
+
+UIのテキスト属性指定
+	"UI.Text"とする必要がある(C#なら"using System.UI")
+	(例) GetComponent(UI.Text)
+
 -------------------------------------------------------------------------------
 Android
 

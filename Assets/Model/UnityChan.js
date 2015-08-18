@@ -3,10 +3,11 @@
 var rr: float = 5.0;
 var theta: float = 0.0;
 
-var motion: int = 0;
+var actionState: int = 0;
+var actionStateChanger: int = 1;
 
 function Start () {
-	StartCoroutine(Loop());
+	this.gameObject.SetActive(false);
 }
 
 function Update () {
@@ -14,14 +15,16 @@ function Update () {
 	transform.position.z = rr * Mathf.Cos(theta);
 	transform.rotation = Quaternion.Euler(0, theta * Mathf.Rad2Deg + 90, 0);
 
-	switch (motion) {
-		case 0:
+	switch (actionState) {
+		case 1:
 			this.GetComponent(Animator).SetBool("isRunning", false);
 			theta += 0.003;
 			break;
-		case 1:
+		case 2:
 			this.GetComponent(Animator).SetBool("isRunning", true);
 			theta += 0.012;
+			break;
+		default:
 			break;
 	}
 
@@ -30,10 +33,21 @@ function Update () {
 	}
 }
 
-function Loop () {
-	while (true) {
-		yield WaitForSeconds(5);
-		motion += 1;
-		motion = motion % 2;
+function ChangeAction() {
+	actionState += actionStateChanger;
+	if (actionState > 2) {
+		actionState = 1;
+		actionStateChanger *= -1;
+	}
+	else if (actionState < 0) {
+		actionState = 1;
+		actionStateChanger *= -1;
+	}
+	
+	if (actionState == 0) {
+		this.gameObject.SetActive(false);
+	}
+	else {
+		this.gameObject.SetActive(true);
 	}
 }
