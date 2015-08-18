@@ -4,7 +4,7 @@ var actionState: int = 0;
 var actionStateChanger = 1;
 
 function Start () {
-	this.GetComponent(UI.Text).text = "UnityChanAction: Hidden";
+	transform.Find("Text").gameObject.GetComponent(UI.Text).text = "UnityChanAction: Hidden";
 }
 
 function Update () {
@@ -23,13 +23,13 @@ function ToggleText() {
 
 	switch (actionState) {
 		case 1:
-			this.GetComponent(UI.Text).text = "UnityChanAction: Walking";
+			transform.Find("Text").gameObject.GetComponent(UI.Text).text = "UnityChanAction: Walking";
 			break;
 		case 2:
-			this.GetComponent(UI.Text).text = "UnityChanAction: Running";
+			transform.Find("Text").gameObject.GetComponent(UI.Text).text = "UnityChanAction: Running";
 			break;
 		default:
-			this.GetComponent(UI.Text).text = "UnityChanAction: Hidden";
+			transform.Find("Text").gameObject.GetComponent(UI.Text).text = "UnityChanAction: Hidden";
 			break;
 	}
 }
